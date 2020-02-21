@@ -1,0 +1,7 @@
+{
+    "[go]":  {
+        "editor.formatOnSave": false,
+    },
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": false,
+}
