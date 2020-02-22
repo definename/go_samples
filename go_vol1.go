@@ -3,9 +3,6 @@ package main
 import (
 	"fmt"
 	"unsafe"
-	"os"
-	"log"
-	"strconv"
 )
 
 func main() {
@@ -59,48 +56,5 @@ func main() {
 		fallthrough
 	case sw > 100:
 		fmt.Printf(">50\n")
-	}
-	
-	// Args
-	// if len(os.Args) != 2 {
-	// 	log.Fatal("The are not enough arguments")
-	// }
-
-	// argOne, err := strconv.Atoi(os.Args[1])
-	// if err != nil {
-	// 	log.Fatal("The first arg shuold have int type")
-	// }
-	// log.Println(argOne)
-
-	// Calculate 
-	aSide, errA := strconv.Atoi(os.Args[1])
-	if errA != nil {
-		log.Fatal("A is incorrect")
-	}
-	bSide, errB := strconv.Atoi(os.Args[2])
-	if errB != nil {
-		log.Fatal("B is incorrect")
-	}
-	cSide, errC := strconv.Atoi(os.Args[3])
-	if errC != nil {
-		log.Fatal("C is incorrect")
-	}
-	log.Println(aSide)
-	log.Println(bSide)
-	log.Println(cSide)
-
-	geron := (aSide + bSide + cSide) / 2
-	log.Println("Geron is:", geron)
-
-	if (aSide + bSide) < cSide {
-		log.Fatal("Geron is invalid1")
-	}
-
-	if (cSide + bSide) < aSide {
-		log.Fatal("Geron is invalid2")
-	}
-
-	if (cSide + aSide) < bSide {
-		log.Fatal("Geron is invalid2")
 	}
 }
