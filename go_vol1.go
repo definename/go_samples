@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"unsafe"
 )
 
@@ -40,6 +41,11 @@ func main() {
 	// Loop
 	for i := 32; i < 33; i++ {
 		fmt.Printf("->%d\n", i)
+	}
+
+	arr := []int{11, 22}
+	for index, value := range arr {
+		log.Println("index:", index, "value", value)
 	}
 
 	sw := 55
