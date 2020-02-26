@@ -45,16 +45,6 @@ func mToKm(v meter) kilometer {
 	return kilometer(v / 1000)
 }
 
-type BaseStar struct {
-	name string
-}
-
-type Star struct {
-	BaseStar
-	distance      int
-	constellation string
-}
-
 func main() {
 	log.Println(fact(5))
 
@@ -103,27 +93,4 @@ func main() {
 	var m meter = 1000
 	var k kilometer = mToKm(m)
 	log.Println("meter to kilometer:", k)
-
-	// Struct
-	aldebaran1 := Star{BaseStar{"Aldebaran"}, 65, "Taurus"}
-	log.Println(aldebaran1)
-	aldebaran2 := Star{
-		BaseStar:      BaseStar{name: "Aldebaran"},
-		distance:      65,
-		constellation: "Taurus"}
-	log.Println(aldebaran2)
-	log.Println(aldebaran1 == aldebaran2)
-	aldebaran3 := &Star{BaseStar{"Aldebaran"}, 65, "Taurus"}
-	log.Println(aldebaran3)
-
-	anonymStruct := struct {
-		firstName string
-		lastName  string
-		salary    int
-	}{
-		firstName: "Harry",
-		lastName:  "Potter",
-		salary:    9999,
-	}
-	log.Println(anonymStruct)
 }
