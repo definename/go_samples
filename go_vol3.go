@@ -82,12 +82,10 @@ func main() {
 	// Default value
 	log.Println("Def value:", z)
 
-	{
-		// Defer
-		defer log.Println("world1")
-		defer log.Println("world2")
-		log.Println("Hello")
-	}
+	// Defer
+	defer log.Println("world1")
+	defer log.Println("world2")
+	log.Println("Hello")
 
 	// Alias
 	var m meter = 1000
