@@ -12,7 +12,7 @@ var (
 )
 
 func OpenDb() {
-	var err error
+	// TODO: Use global variable here.
 	db, err := sql.Open("sqlite3", "./go_rest.db")
 	if err != nil {
 		log.Fatal(err)
